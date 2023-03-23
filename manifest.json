@@ -1,0 +1,24 @@
+{
+    "name": "test",
+    "version": "1.0.0",
+    "manifest_version": 3,
+    "minimum_chrome_version": "10.0",
+    "devtools_page": "devtools.html",
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "devtools/content.js"
+            ]
+        }
+    ],
+    "background": {
+        "service_worker": "devtools/background.js"
+    },
+    "permissions": [
+        "activeTab",
+        "scripting"
+    ]
+}
